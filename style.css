@@ -1,33 +1,59 @@
-main{
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-}
-
-@media (min-width:600px){
-    body{font-size: 2.5rem;}
-}
-
-@media (min-width:768px){
-    main{ flex-direction: row; }
-    article{ flex:2; padding-right: 20px}
-    aside{flex: 1;margin-top:0}
-}
-
-@media(min-width:1200px) {
-    main{
-
-        max-width:1100px;
-        margin: 0 auto;
-    }
-    header,footer{
-        padding:40px 0;  
-    }
-}
-header{
-    color:rgb(2, 2, 22);
-    background-color:rgb(231, 228, 223);
+:root{
+    --primary: #1a3a5f;
+    --accent:#00b4d8;
+    --text:#333;
+    --green: #40a959;
 }
 body{
-    background-color:rgb(109, 174, 235);
+    color:var(--text);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0;
+    padding:20px;
+}
+header{
+    border-bottom: 2px solid var(--green);
+    margin-bottom: 25px;
+    padding-bottom:20px;
+}
+footer{
+    border-top: 2px solid var(--green);
+    margin-top: 25px;
+    padding-top:20px;
+}
+article{
+    width:100%;
+    border-top: 8px solid var(--accent);
+    box-shadow: 0 4px 15 px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+/* Media Queries */
+@media (max-width:768px){
+    #expertise ul{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:10px;
+        padding: 0;
+        list-style: none;
+    }
+}
+@media (max-width:480px){
+    #expertise ul{
+        grid-template-columns: 1fr 1fr;
+    }
+    article{box-shadow: none; border: 1px solid #dea}
+}
+
+/* Add these styles to support the JS toggle */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+body.dark-mode article {
+    background-color: #2d2d2d;
+    color: white;
 }
