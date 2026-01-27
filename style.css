@@ -1,0 +1,33 @@
+main{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+@media (min-width:600px){
+    body{font-size: 2.5rem;}
+}
+
+@media (min-width:768px){
+    main{ flex-direction: row; }
+    article{ flex:2; padding-right: 20px}
+    aside{flex: 1;margin-top:0}
+}
+
+@media(min-width:1200px) {
+    main{
+
+        max-width:1100px;
+        margin: 0 auto;
+    }
+    header,footer{
+        padding:40px 0;  
+    }
+}
+header{
+    color:rgb(2, 2, 22);
+    background-color:rgb(231, 228, 223);
+}
+body{
+    background-color:rgb(109, 174, 235);
+}
