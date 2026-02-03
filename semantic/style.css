@@ -1,0 +1,67 @@
+/* External CSS Styles */
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+background-color: #f4f4f4;
+}
+header {
+background-color: #333;
+color: white;
+text-align: center;
+padding: 1rem;
+}
+header h1 {
+margin: 0;
+font-size: 2.5rem;
+}
+main {
+padding: 2rem;
+max-width: 1200px;
+margin: auto;
+}
+.gallery {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(200px, 1
+fr));
+gap: 1rem;
+}
+figure {
+    margin: 0;
+position: relative;
+}
+figure img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 8px;
+}
+figcaption {
+background-color: #fff;
+padding: 0.5rem;
+text-align: center;
+border-radius: 0 0 8px 8px;
+position: absolute;
+bottom: 0;
+width: 100%;
+box-shadow: 0-1px 4px rgba(0, 0, 0, 0.1);
+}
+footer {
+background-color: #333;
+color: white;
+text-align: center;
+padding: 1rem;
+position: fixed;
+bottom: 0;
+width: 100%;
+}
+@media (max-width: 768px) {
+.gallery {
+grid-template-columns: repeat(auto-fill, minmax(150
+px, 1fr));
+}
+header h1 {
+font-size: 2rem;
+}
+}
